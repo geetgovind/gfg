@@ -13,7 +13,7 @@ console.log(message);
 
 //Template Literals
 // use backticks ` ` and no \n is required to break line
-let finalText = `My anme is ${userName} and my age is ${userAge}.`;
+let finalText = `My name is ${userName} and my age is ${userAge}.`;
 console.log(finalText);
 let multiLineInput = `Numbers: Represent both integer and floating-point numbers. Example: 5, 6.5, 7 etc.
 String: A string is a sequence of characters. In JavaScript, strings can be enclosed within the single or double quotes. Example: “Hello GeeksforGeeks” etc.
