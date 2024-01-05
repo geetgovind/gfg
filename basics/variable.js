@@ -6,10 +6,11 @@
 
 var message; // declaring variable
 message = "Hello Geeks"; // Assigning value to variable
-message = "JavaScript is needed for web development";
+var message = "JavaScript is needed for web development";
 console.log(message);
 
 // var is re-writtable
+// var is re-declareable
 
 let text;
 text = "javaScript is best";

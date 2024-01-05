@@ -1,0 +1,35 @@
+Concatenation and Template Literal
+
+The same + operator you use for adding two numbers can be used to concatenate two strings.
+
+const str = 'Hello' + ' ' + 'World';
+str; // 'Hello World'
+You can also use +=, where a += b is a shorthand for a = a + b.
+
+let str = 'Hello';
+str += ' ';
+str += 'World';
+str; // 'Hello World'
+If the left hand side of the + operator is a string, JavaScript will coerce the right hand side to a string. That means it is safe to concatenate objects, numbers, null, and undefined.
+
+let str = 'Values: ';
+str += 42;
+str += ' ';
+
+str += {};
+str += ' ';
+
+str += null;
+
+str; // 'Values: 42 [object Object] null'
+ 
+
+Template Literal in ES6 provides new features to create a string that gives more control over dynamic strings. Traditionally, String is created using single quotes (‘) or double quotes (“) quotes. Template literal is created using the backtick (`) character.
+
+Syntax: var s = `some string` ;
+
+Multiline Strings: In-order to create a multiline string an escape sequence \n was used to give new line character. However, Template Literals there is no need to add \n string ends only when it gets backtick (`) character.
+
+Expressions: To dynamically add values into new Template Literals expressions are used. The ${} syntax allows an expression in it that produces the value. This value can be a string stored in a variable or a computation operation.
+
+${expression}
