@@ -1,0 +1,28 @@
+ReadlineSync
+
+Readline Module in Node.js allows the reading of input stream line by line. This module wraps up the process standard output and process standard input objects. Readline module makes it easier for input and reading the output given by the user. To use this module, create a new JavaScript file and write the following code at the starting of the application :
+
+var readline = require('readline');
+The Readline module comes with different methods to interact with the user.
+ 
+
+Interaction with the user: For the interaction, we will first create an interface for the input and output. For creating an interface, write the following code :
+
+var readline = require('readline');
+var rl = readline.createInterface(process.stdin, process.stdout);
+Here, the createInterface() method takes two arguments. The first argument will be for the standard input and the second one will be for reading the standard output. 
+
+rl.question('What is your age? ', (age)=> {
+    console.log('Yor age is: ' + age);
+});
+Here, rl.question() method is used for asking questions from the user and reading their reply (output). The first parameter is used to ask the question and the second parameter is a callback function which will take the output from the user as the parameter and return it on the console. 
+The output for the above code will be :
+
+What is your age? 20
+Your age is: 20
+Here, the problem is, it will not exit the application and it will keep asking for the inputs. To resolve this issue, rl.close() method is used. This method will close the interface. To use it in the application, write the following :
+
+rl.question('What is your age? ', (age) => {
+   console.log(' Your age is: ' + age);
+   rl.close();
+});
