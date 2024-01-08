@@ -1,1 +1,1 @@
-javaScript course from GeeksforGeeks
+javaScript Beginner to Advance course from GeeksforGeeks
