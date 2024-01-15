@@ -1,0 +1,59 @@
+JavaScript Ternary Operator
+
+"Question mark" or "conditional" operator in JavaScript is a ternary operator that has three operands.
+
+The expression consists of three operands: the condition, value if true and value if false.
+The evaluation of the condition should result in either true/false or a boolean value.
+The true value lies between "?" & ":" and is executed if the condition returns true. Similarly, the false value lies after ":" and is executed if the condition returns false.
+Syntax:
+
+condition ? value if true : value if false
+Expression to be evaluated which returns a boolean value.
+Value to be executed if condition results in true state.
+Value to be executed if condition results in false state.
+Examples:
+
+Input: let result = (10 > 0) ? true : false;
+Output: true
+
+Input: let message = (20 > 15) ? "Yes" : "No";
+Output: Yes
+The following programs will illustrate conditional operator more extensively: Program 1: 
+
+
+function gfg() {  
+//JavaScript to illustrate 
+//Conditional operator 
+
+let age = 60 
+let result = (age > 59)? 
+"Senior Citizen":"Not a Senior Citizen"; 
+
+console.log(result); 
+}  
+gfg();  
+
+
+Output
+Senior Citizen
+ 
+
+An example of multiple conditional operators. Program 2: 
+
+  
+    function gfg() {  
+    //JavaScript to illustrate
+    //multiple Conditional operators
+
+    let marks = 95;
+    let result = (marks < 40) ? "Unsatisfactory": 
+             (marks < 60) ? "Average":
+             (marks < 80) ? "Good":"Excellent";
+
+    console.log(result);
+    }  
+    gfg();  
+
+
+Output
+Excellent
