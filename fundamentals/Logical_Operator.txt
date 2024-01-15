@@ -1,0 +1,84 @@
+JavaScript Logical Operators
+
+There are three logical operators in JavaScript: 
+
+!(NOT)
+&&(AND)
+||(OR)
+
+!(NOT) 
+It reverses the boolean result of the operand (or condition). 
+
+result = !value;
+
+The following operator accepts only one argument and does the following:  
+
+Converts the operand to boolean type i.e true/false
+Returns the flipped value
+
+Example: 
+
+// !(NOT) operator
+let geek = 1;
+console.log(!geek);
+
+
+Output
+false
+
+The operator converted the value '1' to boolean and it resulted in 'true' then after it flipped(inversed) that value and that's why when we finally alert the value we get 'false'.  
+
+
+&&(AND) 
+The && operator accepts multiple arguments and it mainly does the following:  
+
+Evaluates the operands from left to right
+For each operand, it will first convert it to a boolean. If the result is false, stops and returns the original value of that operand.
+otherwise if all were truthy it will return the last truthy value.
+result = a && b; // can have multiple arguments.
+
+Example:  
+
+// &&(AND) operator
+console.log( 0 && 1 ); // 0
+console.log( 1 && 3 ); // 3
+console.log( null && true ); // null
+console.log( 1 && 2 && 3 && 4); // 4
+
+Output
+0
+3
+null
+4
+ 
+
+
+||(OR) 
+The 'OR' operator is somewhat opposite of 'AND' operator. It does the following:  
+
+evaluates the operand from left to right.
+For each operand, it will first convert it to a boolean. If the result is true, stops and returns the original value of that operand.
+otherwise if all the values are falsy, it will return the last value.
+result = a || b;
+
+Example:  
+
+// ||(OR) Operator
+console.log( 0 || 1 ); // 1
+console.log( 1 || 3 ); // 1
+console.log( null || true ); // true
+console.log( -1 || -2 || -3 || -4); // -1
+
+Output
+1
+1
+true
+-1
+
+Supported Browser:
+
+Google Chrome
+Microsoft Edge
+Firefox
+Opera
+Safari
