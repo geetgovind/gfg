@@ -1,0 +1,75 @@
+JavaScript Nullish Coalescing
+
+Nullish Coalescing Operator: It is a new feature introduced in this ECMA proposal has now been adopted into the official JavaScript Specification. This operator returns the right hand value if the left hand value is null or undefined. If not null or undefined then it will return left hand value. Before, setting default values for undefined and null variables required the use of if statement or the Logical OR operator "||" as shown below:
+
+Program: 
+function foo(bar) {
+    bar = bar || 42;
+    console.log(bar);
+}
+
+foo();
+
+
+Output
+42
+ 
+
+When the passed parameter is less than the number of parameters defined in the function prototype, it is assigned the value of undefined. To set default values for the parameters not passed during the function call, or to set default values for fields not present in a JSON object, the above method is popular.
+
+Program: 
+function foo(bar) {
+    bar = bar || 42;
+    console.log(bar);
+}
+
+foo(0);
+
+
+Output
+42
+ 
+
+There are values in JavaScript like 0 and an empty string that are logically false by nature. These values may change the expected behavior of the programs written in JavaScript. All the reoccurring problems led to the development of the Nullish Coalescing Operator. The Nullish Coalescing Operator is defined by two adjacent question marks ?? and its use is as follows:
+
+Syntax:
+variable ?? default_value
+Examples: If the passed variable is either null or undefined and only if it is those two values, the default value would be returned. In all other cases including 0, empty string, or false, the value of the variable is returned and not the default value.
+
+Program 1: 
+function foo(bar) {
+    bar = bar ?? 42;
+    console.log(bar);
+}
+
+foo();  // 42
+foo(0); // 0
+
+Output
+42
+0
+ 
+
+Program 2: The more common use case is to set default values for JSON objects as follows. 
+const foo = {
+    bar: 0
+}
+
+const valueBar = foo.bar ?? 42;
+const valueBaz = foo.baz ?? 42;
+
+// Value of bar: 0
+console.log("Value of bar: ", valueBar);
+
+// Value of bar: 42
+console.log("Value of baz: ", valueBaz);
+
+Output
+Value of bar:  0
+Value of baz:  42
+ 
+
+Supported Browsers: The browsers supported by JavaScript Nullish Coalescing Operator are listed below:
+
+Google Chrome 80
+Firefox 72
