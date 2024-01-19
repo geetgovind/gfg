@@ -1,0 +1,73 @@
+Function Declaration and use in JavaScript
+
+Introduction
+A function is a reusable piece of code that may take some input as parameters ,does some processing , and produces a certain output based on the given inputs.
+
+The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can call the function itself.
+
+We can create functions in JavaScript using the keyword function. The basic syntax to create a function in JavaScript is shown below.
+
+Syntax:
+
+function functionName(Parameter1, Parameter2, ..)
+{
+    // Function body
+}
+We have to first use the keyword function, separated by name of function and parameters within parenthesis. The part of function inside the curly braces {} is the body of the function.
+
+Function Definition
+For using a user-defined function in JavaScript ,we have to create one. We can use the above syntax to create a function in JavaScript. A function definition is sometimes also termed as function declaration or function statement.
+
+Below are the rules for creating a function in JavaScript:
+
+Every function should begin with the keyword function followed by,
+A user defined function name which should be unique,
+A list of parameters enclosed within parenthesis and separated by commas,
+A list of statement composing the body of the function enclosed within curly braces {}.
+Note: We can call a function even before we have defined it. This is due to Hoisting in JavaScript.
+
+Example:
+
+function calcAddition(number1, number2) 
+{ 
+    return number1 + number2; 
+}
+
+console.log(calcAddition(2,3));
+
+Output
+5
+ 
+
+Function Parameters
+ 
+Function parameters are additional information passed to a function. For example, in the above example, the task of the function calcAddition is to calculate addition of two numbers. These two numbers on which we want to perform the addition operation are passed to this function as parameters. The parameters are passed to the function within parentheses after the function name and separated by commas. A function in JavaScript can have any number of parameters.
+
+Calling Functions: After defining a function, the next step is to call them to make use of the function. We can call a function by using the function name along with the value of parameters enclosed between parenthesis and a semicolon at the end. Below syntax shows how to call functions in JavaScript.
+
+Note: Javascript does not throw an error if the number of parameters passed and number of parameters required do not match. There is an in-built arguments object in every function which holds all value passed to the function.
+
+functionName( Value1, Value2, ..);
+Below is a sample program that illustrate working of functions in JavaScript:
+
+// Function definition
+function welcomeMsg(name) {
+   console.log("Hello " + name + " welcome to GeeksforGeeks");
+}
+  
+// creating a variable
+var nameVal = "Admin";
+  
+// calling the function
+welcomeMsg(nameVal);
+
+Output
+Hello Admin welcome to GeeksforGeeks
+ 
+
+Return Statement: 
+There are some situations when we want to return some values from a function after performing some operations. In such cases, we can make use of the return statement in JavaScript. This is an optional statement and most of the times the last statement in a JavaScript function. Look at our first example with the function named as calcAddition. This function is calculating two numbers and then returning the result. The most basic syntax of using the return statement is:
+
+return value;
+The return statement begins with the keyword return separated by the value which we want to return from it. We can use an expression also instead of directly returning the value.
+
