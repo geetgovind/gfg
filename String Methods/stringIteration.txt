@@ -1,0 +1,100 @@
+JS Iterating Over String
+
+Whenever we are dealing with strings we need to iterate over them. There are basically two ways in which we can iterate over a string.
+
+Firstly, we can simply use for(let char of message) to iterate through every character of the string. 
+
+let message = "Hello Geeks";
+
+//here char is a variable which takes the value of every letter in the message
+for (let char of message){
+	console.log(char);
+}
+
+Output
+H
+e
+l
+l
+o
+ 
+G
+e
+e
+k
+s
+ 
+
+There can be many use case of iterating over a string. Let us discuss one simple use case using the above mentioned method: 
+
+Problem: Find the number of times the letter 'e' occurs in our message.
+
+let message = "Hello Geeks";
+
+//a variable to keep tract of the instances of 'e'
+let count=0;
+
+for (let char of message){
+	if(char === 'e'){
+    	count++; //value of count will be incremented everytime we come across 'e'
+    }
+}
+console.log("e occurs "+count+" times");
+
+Output
+e occurs 3 times
+ 
+
+The Second way in which we can iterate over a string is using index, ie. position of a particular character in the string. 
+
+let message = "Hello Geeks";
+
+console.log(message[0]) //print char at position 0
+console.log(message[6]) //print char at position 6
+console.log(message[5]) //print char at position 5
+
+Output
+H
+G
+ 
+Note: Any special symbols or space is also a character in the string
+
+Therefore if we want to iterate over the entire string using indexes we make use of for loop as bellow.
+
+let message = "Hello Geeks";
+
+//here i takes the value of index for every character 
+for (let i=0;i<message.length;i++){
+	console.log(message[i]);
+}
+
+Output
+H
+e
+l
+l
+o
+ 
+G
+e
+e
+k
+s
+ 
+
+Now Solving the same problem(Find the number of times the letter 'e' occurs in our message.) using indexes.
+
+let message = "Hello Geeks";
+
+//a variable to keep tract of the instances of 'e'
+let count=0;
+
+for (let i=0; i<message.length; i++){
+	if(message[i] === 'e'){
+    	count++; //value of count will be incremented everytime we come across 'e'
+    }
+}
+console.log("e occurs "+count+" times");
+
+Output
+e occurs 3 times
