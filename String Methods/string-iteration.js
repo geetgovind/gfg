@@ -15,3 +15,15 @@ for(let char of message){
     }
 }
 console.log(`a,e,i occurs ${count} times in the string.`);
+
+
+
+
+//a variable to keep tract of the instances of 'e'
+
+for (let i=0; i<message.length; i++){
+	if(message[i] === 'e'){
+    	count++; //value of count will be incremented everytime we come across 'e'
+    }
+}
+console.log("e occurs "+count+" times");
