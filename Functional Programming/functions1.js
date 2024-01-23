@@ -13,6 +13,13 @@ function greetUser(userName, city){ // initialization
 greetUser("Geet", "Delhi");  // Calling the function
 // "Geet" - argument
 
+/**
+ * The main difference between let and var in JavaScript is that let variables 
+ * are block-scoped, while var variables are function-scoped. 
+ * This means that let variables can only be accessed within the block in
+ *  which they are declared, while var variables can be accessed 
+ * anywhere within the function in which they are declared.
+ */
 
 console.log("--------------------------------------------------------------");
 console.log("Calculate sum from min to max passed as arguments in function.");
