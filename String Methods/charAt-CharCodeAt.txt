@@ -1,0 +1,94 @@
+JS String Method - charAt & charCodeAt
+
+str.charAT()
+str.charAT() Returns character at given index of string.
+
+character = str.charAt(index)
+Arguments: The only argument to this function is the index in the string from where the single character is to be extracted. The range of this index is between 0 and length - 1, including the limits. If no index is specified then the first character of the string is returned as 0 is the default index used for this function. Return value This function returns a single character located at the index specified as the argument to the function. If the index is out of range, then this function returns an empty string. 
+
+Example 1: 
+
+function func() {
+
+    // Original string
+    var str = 'JavaScript is object oriented language';
+
+    // Finding the character at given index 
+    var value = str.charAt(0); 
+    var value1 = str.charAt(4); 
+    console.log(value); 
+    console.log(value1);
+}
+func();
+
+Output
+J
+S
+ 
+
+Example 2: 
+
+In this example the function charAt() finds the character at index 50. Since the index is out of bounds for the given string therefore the function returns "" an empty string. 
+
+// JavaScript to illustrate charAt() function
+function func() {
+
+    // Original string
+    var str = 'JavaScript is object oriented language';
+
+    // Finding the character at given index 
+    var value = str.charAt(50);
+    console.log("Char at index 50 is: "+value);    
+}
+func();
+
+Output
+Char at index 50 is: 
+ 
+
+str.charCodeAt()
+str.charCodeAt() method returns a Unicode character set code unit of the character present at the index in the string specified as the argument. The syntax of the method is as follows:
+
+str.charCodeAt(index)
+Arguments The only argument to this method is the index of the character in the string whose Unicode is to be used. The range of the index is from 0 to length - 1. Return value This method returns the Unicode (ranging between 0 and 65535) of the character whose index is provided to the method as the argument. If the index provided is out of range this method returns NaN.
+
+ Example 1:
+
+In this example the method charCodeAt() extracts the character from the string at index 4. Since this character is m, therefore this method returns the Unicode sequence as 109. 
+
+// JavaScript to illustrate charCodeAt() method
+
+function func() {
+    var str = 'ephemeral';
+
+    // Finding the code of the character at
+    // given index 
+    var value = str.charCodeAt(4);
+    console.log(value);    
+}
+
+func();
+
+Output
+109
+ 
+
+Example 2:
+
+In this example the method charCodeAt() extracts the character from the string at index 20. Since the index is out of bounds for the string, therefore this method returns the answer as NaN. 
+
+// JavaScript to illustrate charCodeAt() method
+
+function func() {
+    var str = 'ephemeral';
+
+    // Finding the code of the character 
+    // at given index 
+    var value = str.charCodeAt(20);
+
+    console.log(value);    
+}
+func();
+
+Output
+NaN
