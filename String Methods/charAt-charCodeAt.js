@@ -25,8 +25,13 @@ for(let i=0; i<message.length; i++){
 console.log("------------------------------------------");
 console.log("Encode \"geeks\" with 2nd next characters in series.");
 console.log("------------------------------------------");
-
-const str = "geeks";
-function getASCII(str, i){
-    return str.charCodeAt(i);
+const readlineSync = require("readline-sync");
+const geek = readlineSync.question("Enetr a string to encode : ")
+ 
+var encode = "";
+for(let i=0; i<geek.length; i++){
+    var code = geek.charCodeAt(i) +2;
+    code = String.fromCharCode(code);
+    encode += code; 
 }
+console.log(encode);
