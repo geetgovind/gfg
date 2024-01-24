@@ -1,0 +1,82 @@
+JS String Method - toUpperCase() and toLowerCase()
+
+str.toUpperCase()
+str.toUpperCase() method converts the entire string to Upper case. This method does not affect any of the special characters, digits, and the alphabets that are already in the upper case. 
+
+Syntax: 
+
+str.toUpperCase()
+
+Return value: 
+This method returns a new string in which all the lower case letters are converted to upper case.
+
+Example 1: 
+
+
+function func() {
+    var str = 'geeksforgeeks';
+    var string = str.toUpperCase();
+    console.log(string);
+}
+func();
+
+Output
+GEEKSFORGEEKS
+In this example the method toUpperCase() converts all the lower case alphabets to their upper case equivalents.
+
+Example 2: 
+
+
+function func() {
+    var str = 'geeksforgeeks#@';
+    var string = str.toUpperCase();
+    console.log(string);
+}
+func();
+
+Output
+GEEKSFORGEEKS#@
+In this example the method toUpperCase() converts all the lower case alphabets to their upper case equivalents without affecting the special characters and the digits. 
+
+ 
+
+str.toLowerCase()
+str.toLowerCase() method converts the entire string to lower case. This method does not affect any of the special characters, digits, and the alphabets that are already in the lower case. 
+
+Syntax:  
+
+str.toLowerCase()
+
+Return value: 
+This method returns a new string in which all the upper case letters are converted to lower case.
+
+Example 1: 
+
+
+function func() {
+    var str = 'GEEKSFORGEEKS';
+    var string = str.toLowerCase();
+    console.log(string);
+}
+func();
+
+Output
+geeksforgeeks
+In this example, the method toLowerCase() converts all the upper case alphabets into lower case alphabets without affecting all those characters that are already in the lower case.
+
+ 
+
+Example 2: 
+
+
+function func() {
+    var str = 'GEEKSFORGEEKS@123';
+    var string = str.toLowerCase();
+    console.log(string);
+}
+func();
+
+Output
+geeksforgeeks@123
+
+In this example the method toLowerCase() converts all the upper case alphabets into lower case alphabets without affecting the special characters, digits and all those characters that are already in lower case.
