@@ -1,0 +1,86 @@
+JS String Method - includes()
+
+In JavaScript, includes() method determines whether a string contains the given characters within it or not. This method returns true if the string contains the characters, otherwise, it returns false. 
+
+Note: The includes() method is case sensitive i.e, it will treat the Uppercase characters and Lowercase characters differently.
+
+Syntax:  
+
+string.includes(searchvalue, start)
+
+Parameters Used: 
+
+search value: It is the string in which the search will take place.
+start: This is the position from where the search will be processed 
+(although this parameter is not necessary if this is not mentioned the search will begin from the start of the string).
+Returns either a Boolean True indicating the presence or it returns a False indicating the absence.
+
+Example 1: 
+
+
+var str = "Welcome to GeeksforGeeks.";
+var check = str.includes("Geeks");
+if(check){
+	console.log("present");
+}
+else{
+	console.log("not present");
+}
+
+
+Output
+present
+
+Explanation: Since the second parameter is not defined, the search will take place from the starting index. And it will search for Geeks, as it is present in the string, it will return a true.
+ 
+
+Example 2: 
+
+
+var str = "Welcome to GeeksforGeeks.";
+var check = str.includes("geeks");
+console.log(check);
+
+
+Output
+false
+
+Explanation: Even in this case the second parameter is not defined, so the search will take place from the starting index. But as this method is case sensitive it will treat the two strings differently, hence returning a boolean false. 
+
+Example 3: 
+ 
+
+
+var str = "Welcome to GeeksforGeeks.";
+var check = str.includes("o",18);
+console.log(check);
+
+
+Output
+false
+Explanation: In this case the second parameter is 18, so the search will take place from index 18, and since there is no 'o' after index 18, it returns false.
+
+ 
+
+Exceptions : 
+
+The search will not be processed if the second parameter i.e computed index(starting index) is greater than or equal to the string length and hence return false.
+
+var str = "Welcome to GeeksforGeeks.";
+var check = str.includes("o",30);
+console.log(check);
+
+
+Output
+false
+ 
+
+If the computed index(starting index) i.e the position from which the search will begin is less than 0, the entire array will be searched. 
+
+var str = "Welcome to GeeksforGeeks.";
+var check = str.includes("o",-2);
+console.log(check);
+
+
+Output
+true
