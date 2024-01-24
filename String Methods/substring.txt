@@ -1,0 +1,56 @@
+JS String Method - substring()
+
+The substring() is an inbuilt function in JavaScript which is used to return the part of the given string from start index to end index. Indexing start from zero (0). 
+
+Syntax: 
+
+string.substring(Startindex, Endindex)
+
+Parameters: Here the Startindex and Endindex describes the part of the string to be taken as substring. Here the Endindex is optional. 
+
+Return value: It returns a new string which is part of the given string. 
+
+JavaScript code to show the working of string.substring() function: 
+Example 1: 
+ 
+
+// Taking a string as variable
+var string = "geeksforgeeks";
+a = string.substring(0, 4)
+b = string.substring(1, 6)
+c = string.substring(5)
+d = string.substring(0)
+
+// Printing new string which are
+// the part of the given string
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+
+Output
+geek
+eeksf
+forgeeks
+geeksforgeeks
+
+Example 2: 
+Index always start with 0. If still we take index as negative, it will be considered as zero and index can't be in fraction if it is found so, it will be converted into its just lesser whole number. 
+ 
+
+// Taking a string as variable
+var string = "geeksforgeeks";
+a = string.substring(-1)
+b = string.substring(2.5)
+c = string.substring(2.9)
+
+// Printing new string which are
+// the part of the given string
+console.log(a);
+console.log(b);
+console.log(c);
+
+Output
+geeksforgeeks
+eksforgeeks
+eksforgeeks
