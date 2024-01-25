@@ -1,0 +1,79 @@
+JS String Method - trim()
+
+str.trim() method is used to remove the white spaces from both the ends of the given string.
+
+Syntax:  
+
+str.trim()
+Return value: 
+
+This method returns a new string, without any of the leading or the trailing white spaces. 
+
+Example 1: In this example the trim() method removes all the leading and the trailing spaces in the string str.
+
+
+function func() {
+    var str = "  GeeksforGeeks      ";
+    var st = str.trim();
+    console.log(st);
+}
+func();
+
+Output
+GeeksforGeeks
+ 
+
+Note: Trim is used to remove white spaces only from the start and end of a string and not from in-between. 
+
+
+function func() {
+    var str = "  Geeks for Geeks      ";
+    var st = str.trim();
+    console.log(st);
+}
+func();
+
+Output
+Geeks for Geeks
+ 
+
+str.trimLeft() method is used to remove the white spaces from the start of the given string. It does not affect the trailing white spaces.
+
+Syntax:  
+
+str.trimLeft()
+Return value: 
+
+This method returns a new string, without any of the leading white spaces. 
+
+
+function func() {
+    var str = "  Geeks for Geeks      ";
+    var st = str.trimLeft();
+    console.log(st);
+}
+func();
+
+Output
+Geeks for Geeks      
+ 
+
+str.trimRight() method is used to remove the white spaces from the end of the given string. It does not affect the white spaces at the start of the string.
+
+Syntax:  
+
+str.trimRight()
+Return value: 
+
+This method returns a new string, without any of the trailing white spaces. 
+
+
+function func() {
+    var str = "  Geeks for Geeks      ";
+    var st = str.trimRight();
+    console.log(st);
+}
+func();
+
+Output
+  Geeks for Geeks
