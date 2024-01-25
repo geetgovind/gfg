@@ -1,0 +1,198 @@
+Basic Properties of Arrays and Iterating over Array
+
+In JavaScript, the array is a single variable that is used to store different elements. It is often used when we want to store a list of elements and access them by a single variable. Unlike most languages where the array is a reference to the multiple variables, in JavaScript array is a single variable that stores multiple elements.
+
+Declaration of an Array: There are basically two ways to declare an array.
+
+Example:
+
+var House = [ ]; // Method 1
+var House = new Array(); // Method 2
+Note: But generally method 1 is preferred over method 2. Let us understand the reason for this.
+
+Example: Initialization of an Array according to method 1.
+
+// Initializing while declaring
+var house = ["1BHK", "2BHK", "3BHK", "4BHK"];
+ 
+
+Example: Initialization of an Array according to method 2.
+
+// Initializing while declaring
+// Creates an array having elements 10, 20, 30, 40, 50
+var house = new Array(10, 20, 30, 40, 50);
+
+// Creates an array of 5 undefined elements
+var house1 = new Array(5);
+
+// Creates an array with element 1BHK
+var home = new Array("1BHK");
+ 
+
+As shown in above example the house contains 5 elements i.e. (10 , 20, 30, 40, 50) while house1 contains 5 undefined elements instead of having a single element 5. Hence, while working with numbers this method is generally not preferred but it works fine with Strings and Boolean as shown in the example above home contains a single element 1BHK.
+
+Example: An array in JavaScript can hold different elements that can store Numbers, Strings, and Boolean in a single array.
+
+// Storing number, boolean, strings in an Array
+var house = ["1BHK", 25000, "2BHK", 50000, "Rent", true];
+ 
+
+Example: Accessing Array Elements of an Array in JavaScript are indexed from 0 so we can access array elements as follows.
+
+var house = ["1BHK", 25000, "2BHK", 50000, "Rent", true];
+alert(house[0]+" cost= "+house[1]);
+var cost_1BHK = house[1];
+var is_for_rent = house[5];
+alert("Cost of 1BHK = "+ cost_1BHK);
+alert("Is house for rent = ")+ is_for_rent);
+ 
+
+Ways of iterating over a array in JavaScript.
+
+Arrays in Javascripts, are single variables used to store different kind of elements.
+For example, a simple array accesses may look something like this: 
+
+array = [ 'geeks', '4', 'geeks' ];
+ 
+// Accessing array elements one by one
+console.log(array[0]);
+console.log(array[1]);
+console.log(array[2]);
+
+Output
+geeks
+4
+geeks
+There are multiple ways one can iterate over an array in JavaScript. The most useful ones are mentioned below.
+Using for loop. 
+This is similar to for loops in other languages like C/C++, Java, etc 
+
+array = [ 1, 2, 3, 4, 5, 6 ];
+for (index = 0; index < array.length; index++) {
+    console.log(array[index]);
+}
+
+Output
+1
+2
+3
+4
+5
+6
+Using while loop. 
+This is again similar to other languages. 
+
+index = 0;
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+while (index < array.length) {
+    console.log(array[index]);
+    index++;
+}
+
+Output
+1
+2
+3
+4
+5
+6
+using forEach method. 
+The forEach method calls the provided function once for every array element in the order. 
+
+index = 0;
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+array.forEach(myFunction);
+function myFunction(item, index)
+{
+    console.log(item);
+}
+
+Output
+1
+2
+3
+4
+5
+6
+Using every method. 
+The every() method checks if all elements in an array pass a test (provided as a function). 
+
+index = 0;
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+const under_five = x => x < 5;
+ 
+if (array.every(under_five)) {
+    console.log('All are less than 5');
+}
+else {
+    console.log('At least one element is not less than 5');
+}
+
+Output
+At least one element is not less than 5
+Using map. 
+A map applies a function over every element and then returns the new array. 
+
+index = 0;
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+square = x => Math.pow(x, 2);
+squares = array.map(square);
+console.log(array);
+console.log(squares);
+
+Output
+[ 1, 2, 3, 4, 5, 6 ]
+[ 1, 4, 9, 16, 25, 36 ]
+Using Filter
+
+It is used to filter values from an array and return the new filtered array
+
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+even = x => x%2 === 0;
+evens = array.filter(even);
+console.log(array);
+console.log(evens);
+
+Output
+[ 1, 2, 3, 4, 5, 6 ]
+[ 2, 4, 6 ]
+Using Reduce
+
+It is used to reduce the array into one single value using some functional logic
+
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+const helperSum = (acc,curr) => acc+curr
+sum = array.reduce(helperSum, 0);
+ 
+console.log(array)
+console.log(sum);
+
+Output
+[ 1, 2, 3, 4, 5, 6 ]
+21
+Using Some
+
+It is used to check whether some array values passes a test
+
+array = [ 1, 2, 3, 4, 5, 6 ];
+ 
+const lessthanFourCheck = (element) => element < 4 ;
+const lessthanFour = array.some(lessthanFourCheck)
+ 
+ 
+console.log(array);
+if(lessthanFour){
+    console.log("At least one element is less than 4" )
+}else{
+    console.log("All elements are greater than 4 ")
+}
+
+Output
+[ 1, 2, 3, 4, 5, 6 ]
+At least one element is less than 4
