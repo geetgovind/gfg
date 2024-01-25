@@ -1,0 +1,41 @@
+Copy By Reference
+
+Shallow copy: In the case of shallow copy when we copy the original object into the clone object then the clone object has the copy of the memory address of the original object i.e. both point to the same memory address.
+
+Both original object and cloned object internally point to the same referenced object. Since they point to the same memory address so if we changed the cloned object then changes would be reflected back to the original object.
+
+// changed the original array
+let arr = ['a','b','c'];
+let arr2 = arr;
+  
+arr2.push('d');
+  
+console.log(arr2);
+console.log(arr); // even affected the original array(arr) 
+
+Output
+[ 'a', 'b', 'c', 'd' ]
+[ 'a', 'b', 'c', 'd' ]
+In the above code we can clearly see that when we tried to insert an element inside the array, the original array is also altered which we did not intend and is neither recommended. The use of the spread operator is described below.
+
+Spread operator allows an iterable to expand in places where 0+ arguments are expected. It is mostly used in the variable array where there is more than 1 values are expected. It allows us the privilege to obtain a list of parameters from an array. Syntax of Spread operator is same as Rest parameter but it works completely opposite of it.
+
+Syntax:
+
+var variablename1 = [...value]; 
+// spread operator for copying 
+let arr = ['a','b','c'];
+let arr2 = [...arr];
+  
+console.log(arr); // [ 'a', 'b', 'c' ]
+  
+arr2.push('d'); //inserting an element at the end of arr2
+  
+console.log(arr2); // [ 'a', 'b', 'c', 'd' ]
+console.log(arr); // [ 'a', 'b', 'c' ]
+
+Output
+[ 'a', 'b', 'c' ]
+[ 'a', 'b', 'c', 'd' ]
+[ 'a', 'b', 'c' ]
+By using the spread operator we made sure that the original array is not affected whenever we alter the new array.
