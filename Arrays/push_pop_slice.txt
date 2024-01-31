@@ -1,0 +1,255 @@
+Array push, pop and slice methods
+
+Array push() Method
+
+The arr.push() method is used to push one or more values into the array. This method changes the length of the array by the number of elements added to the array.
+
+Syntax:
+
+arr.push(element1, elements2 ....., elementN)
+Parameters: This method contains as many numbers of parameters as the number of elements to be inserted into the array. Return value: This method returns the new length of the array after inserting the arguments into the array. 
+
+Below is an example of Array push() method.
+
+Example: 
+
+function func() {
+var arr = ['GFG', 'gfg', 'g4g'];
+
+// Pushing the element into the array
+arr.push('GeeksforGeeks');
+console.log(arr);
+
+}
+func();
+
+Output
+[ 'GFG', 'gfg', 'g4g', 'GeeksforGeeks' ]
+ 
+
+Example 1: In this example, the function push() adds the numbers to the end of the array.
+
+var arr = [34, 234, 567, 4];
+print(arr.push(23,45,56));
+print(arr);
+Output:
+
+7
+34,234,567,4,23,45,56
+ 
+
+Example 2: In this example, the function push() adds the objects to the end of the array.
+
+ 
+var arr = [34, 234, 567, 4];
+print(arr.push('jacob',true,23.45));
+print(arr);
+Output:
+
+7
+34,234,567,4,jacob,true,23.45
+More example codes for the above method are as follows:
+
+ Program 1: 
+
+function func() {
+    // Original array
+    var arr = [34, 234, 567, 4];
+ 
+    // Pushing the elements
+    console.log(arr.push(23,45,56));
+    console.log(arr);
+}
+func();
+
+Output
+7
+[
+  34, 234, 567, 4,
+  23,  45,  56
+]
+ 
+
+Array pop() Method
+
+The arr.pop() method is used to remove the last element of the array and also returns the removed element. This function decreases the length of the array.
+
+ Syntax:
+
+arr.pop()
+Parameters: This method does not accept any parameter.
+
+Return value This method returns the removed element array. If the array is empty, then this function returns undefined.
+
+Below is an example of Array pop() method.
+
+Example: 
+
+function func() {
+var arr = ['GFG', 'gfg', 'g4g', 'GeeksforGeeks'];
+
+// Popping the last element from the array
+console.log(arr.pop());
+}
+func();
+
+Output
+GeeksforGeeks
+ 
+
+Example 1: In this example, the pop() method removes the last element from the array, which is 4, and returns it.
+
+var arr = [34, 234, 567, 4];
+var popped = arr.pop();
+print(popped);
+print(arr);
+Output:
+
+4
+34,234,567
+ 
+
+Example 2: In this example, the function pop() tries to extract the last element of the array but since the array is empty therefore it returns undefined as the answer.
+
+var arr = [];
+var popped = arr.pop();
+print(popped);
+Output:
+
+undefined
+More example codes for the above method are as follows :
+
+Program 1: 
+
+function func() {
+    var arr = [34, 234, 567, 4];
+ 
+    // Popping the last element from the array
+    var popped = arr.pop();
+    console.log(popped);
+    console.log(arr);
+}
+func();
+
+Output
+4
+[ 34, 234, 567 ]
+Program 2:
+
+function func() {
+    var arr = [];
+ 
+    // popping the last element
+    var popped = arr.pop();
+    console.log(popped);
+}
+func();
+
+Output
+undefined
+ 
+
+Array slice() Method
+
+The arr. slice() method returns a new array containing a portion of the array on which it is implemented. The original remains unchanged.
+
+ Syntax:
+
+arr.slice(begin, end)
+Parameters: This method accepts two parameters as mentioned above and described below:
+
+begin: This parameter defines the starting index from where the portion is to be extracted. If this argument is missing then the method takes begin as 0 as it is the default start value.
+end: This parameter is the index up to which the portion is to be extracted (excluding the end index). If this argument is not defined then the array till the end is extracted as it is the default end value If the end value is greater than the length of the array, then the end value changes to the length of the array.
+Return value: This method returns a new array containing some portion of the original array. 
+
+Below is an example of the Array slice() method.
+
+Example: 
+
+function func() {
+	// Original Array
+	var arr = [23,56,87,32,75,13];
+	// Extracted array
+	var new_arr = arr.slice(2,4);
+	console.log(arr);
+	console.log("<br>");
+	console.log(new_arr);
+}
+func();
+
+Output
+[ 23, 56, 87, 32, 75, 13 ]
+<br>
+[ 87, 32 ]
+ 
+
+Example 1: In this example, the slice() method extracts the entire array from the given string and returns it as the answer since no arguments were passed to it.
+
+var arr = [23,56,87,32,75,13];
+var new_arr = arr.slice();
+console.log(arr);
+console.log(new_arr);
+Output:
+
+[23,56,87,32,75,13]
+[23,56,87,32,75,13]
+ 
+
+Example 2: In this example, the slice() method extracts the array starting from index 2 till the end of the array and returns it as the answer.
+
+var arr = [23,56,87,32,75,13];
+var new_arr = arr.slice(2);
+console.log(arr);
+document.write(new_arr);
+Output:
+
+[23,56,87,32,75,13]
+[87,32,75,13]
+ 
+
+Example 3: In this example, the slice() method extracts the array from the given array starting from index 2 and including all the elements less than the index 4.
+
+var arr = [23,56,87,32,75,13];
+var new_arr = arr.slice(2,4);
+console.log(arr);
+console.log(new_arr);
+Output:
+
+[23,56,87,32,75,13]
+[87,32]
+The code for the above method is provided below:
+
+Program 1: 
+
+function func() {
+        //Original Array
+        var arr = [23,56,87,32,75,13];
+        //Extracted array
+        var new_arr = arr.slice();
+        console.log(arr);
+        console.log("<br>");
+        console.log(new_arr);
+    }
+    func();
+
+Output
+[ 23, 56, 87, 32, 75, 13 ]
+<br>
+[ 23, 56, 87, 32, 75, 13 ]
+Program 2: 
+
+function func() {
+        //Original Array
+        var arr = [23,56,87,32,75,13];
+        //Extracted array
+        var new_arr = arr.slice(2);
+        console.log(arr);
+        console.log("<br>");
+        console.log(new_arr);
+}
+func();
+
+Output
+[ 23, 56, 87, 32, 75, 13 ]
+<br>
+[ 87, 32, 75, 13 ]
