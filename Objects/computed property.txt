@@ -1,0 +1,37 @@
+Computed Properties
+
+Javascript Object:  Javascript objects contain key-value pairs in which the key represents a property from which we can get and set the value of the object. Now we will see how to declare an object with a computed property name. 
+
+Method 1:  We will use the expression within the [ ] (square bracket) to create the name of an object property. In ES6, it is possible to use an expression within brackets ‘[ ]’. Depending on the result of the expression, a property name will be assigned to an object. 
+
+let LAST_NAME = "lastname";
+let fullname = {
+firstname: "somya",
+[LAST_NAME]: "jain"
+};
+console.log(
+"My fullname is: " + fullname.firstname
++ " " + fullname.lastname
+);
+
+Output
+My fullname is: somya jain
+ 
+
+Method 2:  In this method, We will create the property name of an object dynamically. As part of this method, we will dynamically create an object and add a property name and assign a value to that specific property in order to create a customized key-value pair.  
+
+Syntax:
+
+objectname["name of the property name"]=value
+let LAST_NAME = "lastname";
+    let fullname = {
+        firstname: "somya"
+    };
+    fullname[LAST_NAME] = "jain";
+    console.log(
+        "My fullname is: " + fullname.firstname
+            + " " + fullname.lastname
+    );
+
+Output
+My fullname is: somya jain
